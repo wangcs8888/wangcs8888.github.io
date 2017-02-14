@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600" style="border:1px solid red"></canvas>
+</body>
+<script src="jquery-2.1.4.js"></script>
+<script src="chain.js"></script>
+<script>
+    //优化：使用函数封装代码，让代码结构看起来更加清晰，同时也更加便于维护
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+
+
+    //设置大圆的参数
+    var bigX = 300, bigY = 300, bigRadius = 200;
+
+    var smallRadius = 50;
+    var texts=["前端","UI设计","Android","Java","PHP"];
+    var num=texts.length;
+    var beginRadian = Math.PI / 3;//第一个小圆位于大圆的弧度
+
+    //优化：参数以对象的方式进行传递，解决了用户因为参数太多而导致传参错误的问题
+    var chain=new Chain({
+        texts:texts,
+        ctx:ctx,
+        bigX:bigX,
+        bigY:bigY,
+        bigRadius:bigRadius,
+        smallRadius:smallRadius,
+        num:num,
+        //beginRadian:beginRadian//第一个圆心位于大圆的弧度
+    });
+
+    //缺省：默认
+
+
+
+
+
+
+</script>
+</html>

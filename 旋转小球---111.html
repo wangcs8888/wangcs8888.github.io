@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600" style="border:1px solid red"></canvas>
+</body>
+<script src="jquery-2.1.4.js"></script>
+<script src="chain-111.js"></script>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var bigX=300;
+    var bigY=300;
+    var bigRadius=200;
+    var smallRadius=50;
+    var texts=["前端","UI","PHP","C++","Java"];
+    var num=texts.length;
+    var beginRadian=Math.PI/3;//第一个小球的起点;
+
+    var chain=new Chain({
+        bigRadius:bigRadius,
+        smallRadius:smallRadius,
+        bigX:bigX,
+        bigY:bigY,
+        texts:texts,
+        num:num,
+        beginRadian:beginRadian
+    });
+
+    </script>
+</html>
